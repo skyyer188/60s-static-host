@@ -2,7 +2,7 @@ import { formatSavedData, localeDate, localeTime } from '../src/utils'
 import { parsePostViaLLM } from '../src/services/parser'
 import type { SavedData } from '../src/services/storage'
 
-const url = 'https://mp.weixin.qq.com/s/XoOERCD6a1FsTxl3hgPW4A'
+const url = 'https://mp.weixin.qq.com/s/j3aTAt-wXZchgal_6lJ5Ng'
 
 const parsed = await parsePostViaLLM(url)
 
