@@ -18,10 +18,9 @@ export function log(...values: unknown[]): void {
 }
 
 export function getInputArgValue(argName: string): string | undefined {
-  return process.argv
-    .find(arg => arg.startsWith(`--${argName}`))
-    ?.split('=')[1]
-    ?.trim()
+  const str = process.argv.find(arg => arg.startsWith(`--${argName}`))
+  if (!str) return ''
+  return str?.replace(`--${argName}=`, '') || ''
 }
 
 export function localeDate(ts: number | string | Date = Date.now()) {
